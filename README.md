@@ -11,9 +11,9 @@ Welcome to the Foodie project! This application provides a seamless online food 
  - Fully Responsive Design: The website is designed to be fully responsive, ensuring a consistent user experience across various devices and screen sizes.
 
 ## Technologies Used
-Frontend: HTML, CSS, JavaScript, React.js
-Backend: Node.js, PHP, MySQL
-Deployment: GitHub for version control, XAMPP for local development
+ - Frontend: HTML, CSS, JavaScript, React.js
+ - Backend: Node.js, PHP, MySQL
+ - Deployment: GitHub for version control, XAMPP for local development
 
 ---
 
