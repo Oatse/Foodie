@@ -1,0 +1,154 @@
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .notification-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 320px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .notification-content {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .notification-icon {
+    flex-shrink: 0;
+  }
+  
+  .notification-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .notification-icon.success svg {
+    color: #10b981;
+  }
+  
+  .notification-icon.warning svg {
+    color: #f59e0b;
+  }
+  
+  .notification-body {
+    flex-grow: 1;
+  }
+  
+  .notification-title {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .notification-message {
+    margin: 0;
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .notification-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    justify-content: flex-end;
+  }
+  
+  .notification-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .notification-button.confirm {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .notification-button.confirm:hover {
+    background-color: #dc2626;
+  }
+  
+  .notification-button.cancel {
+    background-color: #e5e7eb;
+    color: #374151;
+  }
+  
+  .notification-button.cancel:hover {
+    background-color: #d1d5db;
+  }
+  
+  .notification-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #6b7280;
+    transition: color 0.2s ease;
+  }
+  
+  .notification-close:hover {
+    color: #374151;
+  }
+  
+  /* Toast style notifications */
+  .notification-toast {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    animation: slideInRight 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

@@ -1,0 +1,185 @@
+header {
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5)
+  ), url('/table-with-variety-food-including-rice-rice-vegetables 1.png') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Menambahkan elemen dekoratif organik */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.header-contents {
+  max-width: 900px;
+  padding: 60px 40px;
+  color: white;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1.2s ease-out;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  position: relative;
+}
+
+/* Efek blur yang lebih organik */
+.header-contents::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(
+    circle at center,
+    rgba(108, 92, 231, 0.1),
+    transparent 70%
+  );
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.header-contents h2 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #fff 60%, rgba(255,255,255,0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.header-contents span {
+  color: #6C5CE7;
+  background: linear-gradient(120deg, #6C5CE7, #a29bfe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.header-contents p {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.header-contents button {
+  background: linear-gradient(135deg, #6C5CE7 0%, #8E7AFF 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 3.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+}
+
+/* Efek hover yang lebih menarik */
+.header-contents button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(108, 92, 231, 0.4);
+  background: linear-gradient(135deg, #7C6CF7 0%, #9E8AFF 100%);
+}
+
+.header-contents button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.header-contents button:hover::before {
+  left: 100%;
+}
+
+/* Animasi yang lebih halus */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Indikator scroll yang lebih menarik */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-contents {
+    padding: 40px 25px;
+    margin: 0 20px;
+  }
+  
+  .header-contents h2 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+  }
+  
+  .header-contents p {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    padding: 0 10px;
+  }
+  
+  .header-contents button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
