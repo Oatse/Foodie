@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Simple CRUD Foodie Projek
 
 - Smooth Scrolling
@@ -6,3 +7,6 @@
 - View Cart
 - Proceed to payment
 - Website fully responsive
+=======
+# Foodie
+>>>>>>> 8d97c7527559ce4d5dbe544e4aceb72078d015a5
